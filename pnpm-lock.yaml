@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@polkadot-api/descriptors':
+        specifier: file:.papi\descriptors
+        version: file:.papi/descriptors(polkadot-api@1.9.0(@swc/core@1.10.15)(jiti@2.4.2)(postcss@8.5.1)(rxjs@7.8.1))
       '@tailwindcss/vite':
         specifier: ^4.0.5
         version: 4.0.5(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(lightningcss@1.29.1))
@@ -335,6 +338,11 @@ packages:
 
   '@polkadot-api/codegen@0.13.0':
     resolution: {integrity: sha512-VU0juJz7TWohFa/tUqOSUdauGlGBJT562+POFerz1/DdXeJ4P1U7BKGM+s57PJlN8D6cHfIv1uoPvuuwnfazgg==}
+
+  '@polkadot-api/descriptors@file:.papi/descriptors':
+    resolution: {directory: .papi/descriptors, type: directory}
+    peerDependencies:
+      polkadot-api: '*'
 
   '@polkadot-api/ink-contracts@0.2.5':
     resolution: {integrity: sha512-EqEub18L8IB1Z/QwnAe9Kn3MeRbM9y0gUpbMUg71v0pQVqBPlumA+oboItNTjLBKzd77QcJUr6bKqHr9rA1Utw==}
@@ -1982,6 +1990,10 @@ snapshots:
       '@polkadot-api/metadata-compatibility': 0.1.15
       '@polkadot-api/substrate-bindings': 0.11.0
       '@polkadot-api/utils': 0.1.2
+
+  '@polkadot-api/descriptors@file:.papi/descriptors(polkadot-api@1.9.0(@swc/core@1.10.15)(jiti@2.4.2)(postcss@8.5.1)(rxjs@7.8.1))':
+    dependencies:
+      polkadot-api: 1.9.0(@swc/core@1.10.15)(jiti@2.4.2)(postcss@8.5.1)(rxjs@7.8.1)
 
   '@polkadot-api/ink-contracts@0.2.5':
     dependencies:

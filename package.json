@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@polkadot-api/descriptors": "file:.papi\\descriptors",
     "@tailwindcss/vite": "^4.0.5",
     "polkadot-api": "^1.9.0",
     "react": "^19.0.0",
