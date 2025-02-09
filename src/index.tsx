@@ -1,10 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './app'
-import './global.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./global.css";
+import PapiWrapper from "./components/papi-wrapper";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <PapiWrapper />
+  </StrictMode>
+);

@@ -1,1 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import "dot-connect/font.css";
 @import "tailwindcss";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: #dadada;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  color-scheme: dark;
+  --dc-primary-color: #ff2670;
+  --dc-on-primary-color: #ffffff;
+  --dc-surface-color: light-dark(#ffffff, #1e1e1e);
+  --dc-on-surface-color: light-dark(#000000, #ffffff);
+  --dc-info-color: light-dark(#007aff, #0a84ff);
+  --dc-success-color: light-dark(#34c759, #30d158);
+  --dc-error-color: light-dark(#ff3b30, #ff453a);
+  --dc-max-border-radius: 12px
+}
+
+.font-unbounded {
+  font-family: "Unbounded", sans-serif;
+}
+
+* {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
