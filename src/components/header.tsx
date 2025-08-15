@@ -2,7 +2,7 @@ import { ConnectWallet } from "./connect-wallet";
 
 export function Header() {
 	return (
-		<header className="sticky top-0 w-full max-w-3xl h-12 flex items-center justify-between">
+		<header className="sticky top-0 w-full h-14 flex items-center justify-between">
 			<div className="flex items-center space-x-4 w-full justify-between">
 				<a href="/" className="flex items-center space-x-2 cursor-pointer">
 					<img src="/polkadot.svg" alt="polkadot" className="w-8 h-8" />

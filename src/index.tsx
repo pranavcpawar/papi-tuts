@@ -1,10 +1,12 @@
+import App from "@/components/app.tsx";
+import PapiWrapper from "@/components/papi-wrapper.tsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./components/app.tsx";
-import PapiWrapper from "./components/papi-wrapper.tsx";
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(
+const root = document.getElementById("root") as HTMLElement;
+
+createRoot(root).render(
 	<StrictMode>
 		<PapiWrapper>
 			<App />

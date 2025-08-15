@@ -1,12 +1,12 @@
-import { Dapp } from "./dapp";
-import { Footer } from "./footer";
-import { Header } from "./header";
+import { Dapp } from "@/components/dapp";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 
 function App() {
 	return (
-		<div className="relative flex w-screen min-h-screen flex-col place-items-center space-y-4 p-3">
+		<div className="dark relative flex w-screen min-h-screen flex-col place-items-center p-2 space-x-2">
 			<Header />
-      <Dapp />
+			<Dapp />
 			<Footer />
 		</div>
 	);
