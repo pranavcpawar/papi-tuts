@@ -2,7 +2,7 @@ import { ChainSwitchMenu } from "@/components/chain-switch-menu";
 
 export function Header() {
 	return (
-		<header className="sticky top-0 w-full h-12 flex items-center justify-between bg-amber-600 shadow-sm px-2">
+		<header className="sticky top-0 w-full h-12 flex items-center justify-between shadow-sm px-2 bg-background rounded-2xl">
 			<div className="flex items-center space-x-4 w-full justify-between">
 				<a href="/" className="flex items-center space-x-2 cursor-pointer">
 					<img src="/polkadot.svg" alt="polkadot" className="w-8 h-8" />

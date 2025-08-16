@@ -22,9 +22,9 @@ export function PolkadotProvider({
 
 	return (
 		<PolkadotContext value={value}>
-			<ChainProvider chainId="paseo">
-				<ReactiveDotProvider config={config}>{children}</ReactiveDotProvider>
-			</ChainProvider>
+			<ReactiveDotProvider config={config}>
+				<ChainProvider chainId="paseo">{children}</ChainProvider>
+			</ReactiveDotProvider>
 		</PolkadotContext>
 	);
 }
