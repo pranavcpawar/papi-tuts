@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "@polkadot-api/descriptors": "file:.papi\\descriptors",
-    "@polkadot-labs/hdkd": "^0.0.21",
-    "@polkadot-labs/hdkd-helpers": "^0.0.21",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-slot": "^1.2.3",
     "@reactive-dot/core": "^0.46.1",

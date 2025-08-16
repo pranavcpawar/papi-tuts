@@ -1,4 +1,10 @@
-import { createContext, useEffect, useState } from "react";
+import {
+	createContext,
+	useCallback,
+	useEffect,
+	useMemo,
+	useState,
+} from "react";
 
 type Theme = "dark" | "light" | "system";
 
@@ -22,12 +28,11 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
 export function ThemeProvider({
 	children,
-	defaultTheme = "system",
+	defaultTheme = "dark",
 	storageKey = "vite-ui-theme",
 	...props
 }: ThemeProviderProps) {
 	const [theme, setTheme] = useState<Theme>(
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 		() => (localStorage.getItem(storageKey) as Theme) || defaultTheme
 	);
 
@@ -49,15 +54,21 @@ export function ThemeProvider({
 		root.classList.add(theme);
 	}, [theme]);
 
-	// eslint-disable-next-line react-x/no-unstable-context-value
-	const value = {
-		theme,
-		setTheme: (theme: Theme) => {
+	const setThemeAndStore = useCallback(
+		(theme: Theme) => {
 			localStorage.setItem(storageKey, theme);
 			setTheme(theme);
 		},
-	};
+		[setTheme, storageKey]
+	);
 
+	const value = useMemo(
+		() => ({
+			theme,
+			setTheme: setThemeAndStore,
+		}),
+		[theme, setThemeAndStore]
+	);
 	return (
 		<ThemeProviderContext {...props} value={value}>
 			{children}

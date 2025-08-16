@@ -1,4 +1,4 @@
-import type { config } from "./config";
+import type { config } from "@/config";
 
 declare module "@reactive-dot/core" {
 	export interface Register {

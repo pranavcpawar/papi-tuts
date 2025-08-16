@@ -1,6 +1,3 @@
-import * as React from "react";
-
-import { PapiWrapperContext } from "@/components/papi-wrapper";
 import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
@@ -11,13 +8,15 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { config } from "@/config";
+import { PolkadotContext } from "@/types/polkadot-provider";
 import type { ChainId } from "@reactive-dot/core";
-import { config } from "../../config";
+import { use, useMemo } from "react";
 
-export function ChainSelectButton() {
-	const { chainId, setChainId, activeChain } = React.use(PapiWrapperContext);
+export function ChainSwitchMenu() {
+	const { chainId, setChainId, activeChain } = use(PolkadotContext);
 
-	const Trigger = React.useMemo(() => {
+	const Trigger = useMemo(() => {
 		return (
 			<Button className="size-10 cursor-pointer" variant="ghost" size="icon">
 				{activeChain?.icon}

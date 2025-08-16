@@ -27,5 +27,5 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedSideEffectImports": true
 	},
-	"include": ["src", "config.ts", "eslint.config.ts", "vite.config.ts", "reactive-dot.d.ts"]
+	"include": ["src", "eslint.config.ts", "vite.config.ts"]
 }

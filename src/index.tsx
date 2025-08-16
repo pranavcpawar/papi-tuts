@@ -1,12 +1,17 @@
-import App from "@/components/app.tsx";
+import { PolkadotProvider } from "@/components/polkadot-provider.tsx";
+import { ThemeProvider } from "@/components/theme-provider";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 
-const root = document.getElementById("root") as HTMLElement;
+import App from "./app.tsx";
+import "./global.css";
 
-createRoot(root).render(
+createRoot(document.getElementById("root")!).render(
 	<StrictMode>
-		<App />
+		<PolkadotProvider>
+			<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+				<App />
+			</ThemeProvider>
+		</PolkadotProvider>
 	</StrictMode>
 );

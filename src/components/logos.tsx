@@ -1,5 +1,16 @@
 export const logos = {
-  polkadot: <img src="/polkadot.svg" alt="polakadot" width={24}  height={24} className="w-8 h-8"/>,
-  paseo: <img src="/paseo.png" alt="paseo" width={24} height={24} className="w-8 h-8" />,
-  westend: <img src="/westend.svg" alt="westend" width={24} height={24} className="w-8 h-8" />
-}
+	polkadot: (
+		<img
+			src="/polkadot.svg"
+			alt="polkadot"
+			width={32}
+			height={32}
+		/>
+	),
+	paseo: (
+		<img src="/paseo.png" alt="paseo" width={32} height={32}  />
+	),
+	westend: (
+		<img src="/westend.svg" alt="westend" width={32} height={32} />
+	),
+};
