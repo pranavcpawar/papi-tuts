@@ -87,7 +87,7 @@ export function isValidEthereumAddress(address: string) {
 
 export function convertSS58(address: string, chain: ChainId) {
 	let prefix: number;
-	if (chain === "polkadot" || chain === "paseo") {
+	if (chain === "paseo") {
 		prefix = 0;
 	} else {
 		prefix = 42;

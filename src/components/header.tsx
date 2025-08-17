@@ -1,4 +1,3 @@
-import { ChainSwitchMenu } from "@/components/chain-switch-menu";
 import ConnectButton from "@/components/connect-button";
 
 export function Header() {
@@ -11,7 +10,6 @@ export function Header() {
 				</a>
 			</div>
 			<div className="flex items-center gap-2 justify-center">
-				<ChainSwitchMenu />
 				<ConnectButton />
 			</div>
 		</header>
